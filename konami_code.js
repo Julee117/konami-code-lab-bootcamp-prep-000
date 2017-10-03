@@ -6,17 +6,19 @@ function init() {
 
   const body = document.querySelector('body');
   body.addEventListener('keydown', function(e) {
-    const key = parseInt(e.detail || e.which);
+    function onKeyDownHandler(e) {
+      const key = parseInt(e.detail || e.which);
 
-    if (key === code[index]) {
-      index++;
-      if (key === code.length) {
-        alert("Congrats!");
+      if (key === code[index]) {
+        index++;
+        if (key === code.length) {
+          alert("Congrats!");
 
+          index = 0;
+        }
+      } else {
         index = 0;
       }
-    } else {
-      index = 0;
     }
   })
 }
