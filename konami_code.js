@@ -18,7 +18,7 @@ function init() {
           index = 0;
         }
       } else {
-        alert("Wrong code")
+        alert("Wrong code");
         index = 0;
       }
     // }
